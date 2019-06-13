@@ -91,8 +91,9 @@ def run():
             run_config(request_config)
     while threading.active_count() > 1:
         time.sleep(1)
-    for tmp_script_path in RunConfig.tmp_script_paths:
-        os.remove(tmp_script_path)
+    if not RunConfig.debug:
+        for tmp_script_path in RunConfig.tmp_script_paths:
+            os.remove(tmp_script_path)
 
 
 if __name__ == '__main__':
