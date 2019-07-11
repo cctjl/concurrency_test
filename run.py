@@ -5,6 +5,7 @@ import argparse
 import os
 import subprocess
 import time
+import json
 import shutil
 from runConfig import RunConfig
 from requests import requests
@@ -52,7 +53,9 @@ def gen_cmd(request_config):
         if method != 'GET':
             lua_fp.write(bytes('\nwrk.method = "%s"' % method, encoding='utf-8'))
         if body:
-            lua_fp.write(bytes('\nwrk.body = "%s"' % str(body), encoding='utf-8'))
+            add_body = '\nwrk.body = \'{}\''.format(json.dumps(body))
+            lua_fp.write(bytes(add_body, encoding='utf-8'))
+        lua_fp.close()
     args.append(' -s %s' % script_path)
     cmd = cmd + ' '.join(args) + ' ' + url
     if not RunConfig.debug:

@@ -28,7 +28,7 @@ requests = [
     },
     {
         'url': 'https://{your_domain}/api/cart/a171913f-49c1-4e5c-bdf3-fed6311f2e08',
-        'method': 'PATCH',
+        'method': 'POST',
         'headers': [
             {
                 'Content-Length': 106,
@@ -37,6 +37,6 @@ requests = [
                 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'
             }
         ],
-        'body': 'product_id=dc11a6af-3516-4e54-ba48-c17900239730&variant_id=a171913f-49c1-4e5c-bdf3-fed6311f2e08&quantity=6'
+        'body': {'ware_id': 61, 'package_num': 2, 'coll_fee': 100, 'recv_address': {'address': 'u5742u7530u8857u9053u53d1u8fbeu8def6u53f7u4e91u91ccu667au80fdu56ed', 'city': {'adcode': '440300', 'center': {'lat': 22.547, 'lng': 114.085947}, 'create_time': '2019-06-19 11:13:45', 'name': 'u6df1u5733u5e02', 'provincecode': '440000', 'rank': 23, 'update_time': '2019-06-19 11:13:45'}, 'city_adcode': '440300', 'create_time': '2019-06-20 11:34:40', 'district': {'adcode': '440307', 'center': {'lat': 22.721511, 'lng': 114.251372}, 'citycode': '440300', 'create_time': '2019-06-19 11:13:45', 'name': 'u9f99u5c97u533a', 'provincecode': '440000', 'rank': 204, 'update_time': '2019-06-19 11:13:45'}, 'district_adcode': '440307', 'geo': {'lat': 22.629942, 'lng': 114.069548}, 'id': 55, 'is_deleted': 0, 'merchant_id': 31, 'name': 'wp', 'phone': '13900000000', 'province': {'adcode': '440000', 'center': {'lat': 23.125178, 'lng': 113.280637}, 'countrycode': '100000', 'create_time': '2019-06-19 11:13:58', 'name': 'u5e7fu4e1cu7701', 'rank': 2, 'update_time': '2019-06-19 11:13:58'}, 'province_adcode': '440000', 'street': {'adcode': '002852', 'center': {'lat': 22.6659, 'lng': 114.054}, 'citycode': '440300', 'create_time': '2019-06-19 11:13:45', 'districtcode': '440307', 'name': 'u5742u7530u8857u9053', 'provincecode': '440000', 'rank': 2852, 'update_time': '2019-06-19 11:13:45'}, 'street_adcode': '002852', 'title': 'u4e91u91ccu65d7u8230', 'update_time': '2019-06-20 16:04:49'}, 'vehicle_mode': 'minivan', 'is_urgent': 1}
     }
 ]
